@@ -1,0 +1,434 @@
+{
+  "nodes": [
+    {
+      "label": "Project",
+      "properties": {
+        "name": "Apollo",
+        "status": "active",
+        "start_date": "2025-08-04"
+      }
+    },
+    {
+      "label": "Project",
+      "properties": {
+        "name": "Zephyr",
+        "status": "completed",
+        "start_date": "2025-07-20"
+      }
+    },
+    {
+      "label": "Project",
+      "properties": {
+        "name": "Hermes",
+        "status": "planned",
+        "start_date": "2025-08-14"
+      }
+    },
+    {
+      "label": "Manager",
+      "properties": {
+        "name": "Alice"
+      }
+    },
+    {
+      "label": "Manager",
+      "properties": {
+        "name": "Erin"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "Bob",
+        "discipline": "software"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "Carol",
+        "discipline": "hardware"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "Dave",
+        "discipline": "mechanical"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "Ivan",
+        "discipline": "devops"
+      }
+    },
+    {
+      "label": "Part",
+      "properties": {
+        "part_id": "P-1002",
+        "name": "Engine Module v2"
+      }
+    },
+    {
+      "label": "Part",
+      "properties": {
+        "part_id": "P-3003",
+        "name": "Control Board"
+      }
+    },
+    {
+      "label": "Part",
+      "properties": {
+        "part_id": "P-2002",
+        "name": "Chassis Frame"
+      }
+    },
+    {
+      "label": "Part",
+      "properties": {
+        "part_id": "P-4004",
+        "name": "Sensor Kit"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "Alexandru",
+        "discipline": "Romania"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "Oana",
+        "discipline": "software"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MANAGES",
+      "from": {
+        "label": "Manager",
+        "name": "Alice"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "since": "2025-08-04",
+        "valid_from": "2025-08-04",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "MANAGES",
+      "from": {
+        "label": "Manager",
+        "name": "Erin"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "since": "2025-08-11",
+        "valid_from": "2025-08-11",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "WORKS_ON",
+      "from": {
+        "label": "Engineer",
+        "name": "Bob"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "role": "Software Engineer",
+        "since": "2025-08-05",
+        "valid_from": "2025-08-05",
+        "valid_to": "2025-08-21"
+      }
+    },
+    {
+      "type": "WORKS_ON",
+      "from": {
+        "label": "Engineer",
+        "name": "Bob"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "role": "Tech Lead",
+        "since": "2025-08-21",
+        "valid_from": "2025-08-21",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "WORKS_ON",
+      "from": {
+        "label": "Engineer",
+        "name": "Carol"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "role": "Hardware Engineer",
+        "since": "2025-08-07",
+        "valid_from": "2025-08-07",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "WORKS_ON",
+      "from": {
+        "label": "Engineer",
+        "name": "Dave"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "role": "Mechanical Engineer",
+        "since": "2025-08-09",
+        "valid_from": "2025-08-09",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "WORKS_ON",
+      "from": {
+        "label": "Engineer",
+        "name": "Ivan"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "properties": {
+        "role": "DevOps Engineer",
+        "since": "2025-08-10",
+        "valid_from": "2025-08-10",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "HAS_PART",
+      "from": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "to": {
+        "label": "Part",
+        "part_id": "P-3003"
+      },
+      "properties": {
+        "qty": 3,
+        "valid_from": "2025-08-09",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "HAS_PART",
+      "from": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "to": {
+        "label": "Part",
+        "part_id": "P-2002"
+      },
+      "properties": {
+        "qty": 1,
+        "valid_from": "2025-08-09",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "HAS_PART",
+      "from": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "to": {
+        "label": "Part",
+        "part_id": "P-4004"
+      },
+      "properties": {
+        "qty": 4,
+        "valid_from": "2025-08-12",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "HAS_PART",
+      "from": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "to": {
+        "label": "Part",
+        "part_id": "P-1002"
+      },
+      "properties": {
+        "qty": 1,
+        "valid_from": "2025-08-12",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "DEPENDS_ON",
+      "from": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Zephyr"
+      },
+      "properties": {
+        "valid_from": "2025-08-05",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "DEPENDS_ON",
+      "from": {
+        "label": "Project",
+        "name": "Apollo"
+      },
+      "to": {
+        "label": "Project",
+        "name": "Hermes"
+      },
+      "properties": {
+        "valid_from": "2025-08-14",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "COLLABORATES_WITH",
+      "from": {
+        "label": "Engineer",
+        "name": "Bob"
+      },
+      "to": {
+        "label": "Engineer",
+        "name": "Carol"
+      },
+      "properties": {
+        "context": "fw-hw interface review",
+        "valid_from": "2025-08-08",
+        "valid_to": "2025-08-21"
+      }
+    },
+    {
+      "type": "COLLABORATES_WITH",
+      "from": {
+        "label": "Engineer",
+        "name": "Carol"
+      },
+      "to": {
+        "label": "Engineer",
+        "name": "Dave"
+      },
+      "properties": {
+        "context": "mounting design v1",
+        "valid_from": "2025-08-15",
+        "valid_to": null
+      }
+    },
+    {
+      "type": "COLLABORATES_WITH",
+      "from": {
+        "label": "Engineer",
+        "name": "Bob"
+      },
+      "to": {
+        "label": "Engineer",
+        "name": "Ivan"
+      },
+      "properties": {
+        "context": "CI pipeline",
+        "valid_from": "2025-08-10",
+        "valid_to": null
+      }
+    },
+    {
+      "from": {
+        "label": "Engineer",
+        "properties": {
+          "name": "Alexandru",
+          "discipline": "Romania"
+        }
+      },
+      "type": "WORKS_ON",
+      "to": {
+        "label": "Project",
+        "properties": {
+          "name": "Apollo"
+        }
+      },
+      "properties": {
+        "role": "Engineer",
+        "since": "2025-08-10",
+        "valid_from": "2025-08-10"
+      }
+    },
+    {
+      "from": {
+        "label": "Engineer",
+        "properties": {
+          "name": "Vlad",
+          "discipline": "electrical"
+        }
+      },
+      "type": "WORKS_ON",
+      "to": {
+        "label": "Project",
+        "properties": {
+          "name": "Apollo"
+        }
+      },
+      "properties": {
+        "role": "Electrical Engineer",
+        "since": "2025-08-10",
+        "valid_from": "2025-08-10"
+      }
+    },
+    {
+      "from": {
+        "label": "Engineer",
+        "properties": {
+          "name": "Oana",
+          "discipline": "software"
+        }
+      },
+      "type": "WORKS_ON",
+      "to": {
+        "label": "Project",
+        "properties": {
+          "name": "Apollo"
+        }
+      },
+      "properties": {
+        "role": "Software Engineer",
+        "since": "2025-08-04",
+        "valid_from": "2025-08-04"
+      }
+    }
+  ]
+}

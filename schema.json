@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "label": "Project",
+      "properties": {
+        "name": "string",
+        "status": "string",
+        "start_date": "date"
+      }
+    },
+    {
+      "label": "Manager",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Engineer",
+      "properties": {
+        "name": "string",
+        "discipline": "string"
+      }
+    },
+    {
+      "label": "Part",
+      "properties": {
+        "part_id": "string",
+        "name": "string"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "MANAGES",
+      "from": "Manager",
+      "to": "Project",
+      "properties": {
+        "since": "date",
+        "valid_from": "date",
+        "valid_to": "date"
+      }
+    },
+    {
+      "type": "WORKS_ON",
+      "from": "Engineer",
+      "to": "Project",
+      "properties": {
+        "role": "string",
+        "since": "date",
+        "valid_from": "date",
+        "valid_to": "date"
+      }
+    },
+    {
+      "type": "HAS_PART",
+      "from": "Project",
+      "to": "Part",
+      "properties": {
+        "qty": "integer",
+        "valid_from": "date",
+        "valid_to": "date"
+      }
+    },
+    {
+      "type": "DEPENDS_ON",
+      "from": "Project",
+      "to": "Project",
+      "properties": {
+        "valid_from": "date",
+        "valid_to": "date"
+      }
+    },
+    {
+      "type": "COLLABORATES_WITH",
+      "from": "Engineer",
+      "to": "Engineer",
+      "properties": {
+        "context": "string",
+        "valid_from": "date",
+        "valid_to": "date"
+      }
+    }
+  ]
+}

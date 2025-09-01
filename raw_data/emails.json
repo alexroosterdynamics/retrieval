@@ -1,0 +1,202 @@
+[
+  {
+    "id": "e-101",
+    "from": "erin.manager@example.com",
+    "subject": "Frank joins Apollo + Fastener Pack",
+    "body": "Team,\n\nPlease add Frank as Electrical Engineer on Apollo effective 2025-08-22. Also add Part P-5005 \"Fastener Pack\" qty=50 to Apollo.\n\nGraph-impact:\n- WORKS_ON(Frank→Apollo): role=Electrical Engineer, since=2025-08-22, valid_from=2025-08-22\n- HAS_PART(Apollo→P-5005): qty=50, valid_from=2025-08-22\n\n— Erin",
+    "recipients": ["frank.engineer@example.com", "bob.engineer@example.com", "carol.engineer@example.com"],
+    "cc": ["alice.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-22T09:15:00+03:00"
+  },
+  {
+    "id": "e-102",
+    "from": "erin.manager@example.com",
+    "subject": "Hermes now ACTIVE",
+    "body": "Switch Project Hermes status from planned to active as of 2025-08-22.\n\nGraph-impact:\n- Project(Hermes): status=active\n\n— Erin",
+    "recipients": ["bob.engineer@example.com", "ivan.engineer@example.com"],
+    "cc": ["alice.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-22T15:40:00+03:00"
+  },
+  {
+    "id": "e-103",
+    "from": "carol.engineer@example.com",
+    "subject": "Collab: Carol ↔ Frank on sensor harness",
+    "body": "Starting a focused collaboration with Frank on the sensor harness routing.\n\nGraph-impact:\n- COLLABORATES_WITH(Carol↔Frank): context=\"sensor harness\", valid_from=2025-08-23\n\n— Carol",
+    "recipients": ["frank.engineer@example.com"],
+    "cc": ["erin.manager@example.com", "bob.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-23T10:05:00+03:00"
+  },
+  {
+    "id": "e-104",
+    "from": "bob.engineer@example.com",
+    "subject": "Increase Control Board qty to 4",
+    "body": "Please bump Control Board (P-3003) from 3 to 4 units.\n\nGraph-impact:\n- HAS_PART(Apollo→P-3003): close previous (valid_to=2025-08-24)\n- HAS_PART(Apollo→P-3003): qty=4, valid_from=2025-08-24\n\n— Bob",
+    "recipients": ["carol.engineer@example.com", "dave.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-24T09:30:00+03:00"
+  },
+  {
+    "id": "e-105",
+    "from": "ivan.engineer@example.com",
+    "subject": "Hermes depends on Zephyr",
+    "body": "For analytics ETL, please note Hermes depends on Zephyr artifacts.\n\nGraph-impact:\n- DEPENDS_ON(Hermes→Zephyr): valid_from=2025-08-24\n\n— Ivan",
+    "recipients": ["alice.manager@example.com", "erin.manager@example.com"],
+    "cc": ["bob.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-24T16:20:00+03:00"
+  },
+  {
+    "id": "e-106",
+    "from": "alice.manager@example.com",
+    "subject": "Grace joins Apollo (QA)",
+    "body": "Add Grace as QA on Apollo effective 2025-08-25.\n\nGraph-impact:\n- WORKS_ON(Grace→Apollo): role=QA Engineer, since=2025-08-25, valid_from=2025-08-25\n\n— Alice",
+    "recipients": ["grace.qa@example.com"],
+    "cc": ["erin.manager@example.com", "bob.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-25T09:00:00+03:00"
+  },
+  {
+    "id": "e-107",
+    "from": "alice.manager@example.com",
+    "subject": "Collab: Bob ↔ Grace for test planning",
+    "body": "Kick off test planning collaboration.\n\nGraph-impact:\n- COLLABORATES_WITH(Bob↔Grace): context=\"test planning\", valid_from=2025-08-25\n\n— Alice",
+    "recipients": ["bob.engineer@example.com", "grace.qa@example.com"],
+    "cc": [],
+    "bcc": [],
+    "send_date": "2025-08-25T11:45:00+03:00"
+  },
+  {
+    "id": "e-108",
+    "from": "erin.manager@example.com",
+    "subject": "Adjust Sensor Kit qty to 3",
+    "body": "Supply constraint: reduce P-4004 Sensor Kit from 4 to 3 units.\n\nGraph-impact:\n- HAS_PART(Apollo→P-4004): close previous (valid_to=2025-08-26)\n- HAS_PART(Apollo→P-4004): qty=3, valid_from=2025-08-26\n\n— Erin",
+    "recipients": ["carol.engineer@example.com", "frank.engineer@example.com"],
+    "cc": ["bob.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-26T08:50:00+03:00"
+  },
+  {
+    "id": "e-109",
+    "from": "bob.engineer@example.com",
+    "subject": "Mounting design v1 complete; start v2",
+    "body": "Close the v1 collaboration and open v2 with the same folks.\n\nGraph-impact:\n- COLLABORATES_WITH(Carol↔Dave \"mounting design v1\"): valid_to=2025-08-26\n- COLLABORATES_WITH(Carol↔Dave): context=\"mounting design v2\", valid_from=2025-08-26\n\n— Bob",
+    "recipients": ["carol.engineer@example.com", "dave.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-26T14:10:00+03:00"
+  },
+  {
+    "id": "e-110",
+    "from": "carol.engineer@example.com",
+    "subject": "Add Cooling Fan (P-6006) qty=2",
+    "body": "Thermal margins are tight; add a new part.\n\nGraph-impact:\n- Create Part node: P-6006 \"Cooling Fan\"\n- HAS_PART(Apollo→P-6006): qty=2, valid_from=2025-08-27\n\n— Carol",
+    "recipients": ["dave.engineer@example.com", "bob.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-27T09:35:00+03:00"
+  },
+  {
+    "id": "e-111",
+    "from": "ivan.engineer@example.com",
+    "subject": "CI pipeline collab ends; start release automation",
+    "body": "CI pipeline effort is complete; moving to release automation.\n\nGraph-impact:\n- COLLABORATES_WITH(Bob↔Ivan \"CI pipeline\"): valid_to=2025-08-27\n- COLLABORATES_WITH(Bob↔Ivan): context=\"release automation\", valid_from=2025-08-27\n\n— Ivan",
+    "recipients": ["bob.engineer@example.com"],
+    "cc": ["alice.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-27T16:00:00+03:00"
+  },
+  {
+    "id": "e-112",
+    "from": "alice.manager@example.com",
+    "subject": "Alice stepping back from day-to-day",
+    "body": "Erin will be the sole active manager for now.\n\nGraph-impact:\n- MANAGES(Alice→Apollo): valid_to=2025-08-28 (keep Erin active)\n\n— Alice",
+    "recipients": ["erin.manager@example.com"],
+    "cc": ["bob.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-28T10:30:00+03:00"
+  },
+  {
+    "id": "e-113",
+    "from": "dave.engineer@example.com",
+    "subject": "Increase Chassis Frame to 2",
+    "body": "We need a spare frame for testing.\n\nGraph-impact:\n- HAS_PART(Apollo→P-2002): close previous (valid_to=2025-08-28)\n- HAS_PART(Apollo→P-2002): qty=2, valid_from=2025-08-28\n\n— Dave",
+    "recipients": ["carol.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-28T13:00:00+03:00"
+  },
+  {
+    "id": "e-114",
+    "from": "ivan.engineer@example.com",
+    "subject": "Drop Apollo → Zephyr dependency",
+    "body": "We can remove the Apollo dependency on Zephyr; Hermes covers remaining needs.\n\nGraph-impact:\n- DEPENDS_ON(Apollo→Zephyr): valid_to=2025-08-29\n\n— Ivan",
+    "recipients": ["erin.manager@example.com", "bob.engineer@example.com"],
+    "cc": [],
+    "bcc": [],
+    "send_date": "2025-08-29T09:10:00+03:00"
+  },
+  {
+    "id": "e-115",
+    "from": "erin.manager@example.com",
+    "subject": "Temporary hold for compliance audit",
+    "body": "Place Apollo on hold for the afternoon during compliance checks.\n\nGraph-impact:\n- Project(Apollo): status=on_hold\n\n— Erin",
+    "recipients": ["judy.legal@example.com", "bob.engineer@example.com", "carol.engineer@example.com"],
+    "cc": [],
+    "bcc": [],
+    "send_date": "2025-08-29T15:40:00+03:00"
+  },
+  {
+    "id": "e-116",
+    "from": "judy.legal@example.com",
+    "subject": "Compliance cleared — back to active",
+    "body": "Audit passed.\n\nGraph-impact:\n- Project(Apollo): status=active\n\n— Judy",
+    "recipients": ["erin.manager@example.com", "alice.manager@example.com"],
+    "cc": ["bob.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-30T11:05:00+03:00"
+  },
+  {
+    "id": "e-117",
+    "from": "bob.engineer@example.com",
+    "subject": "Start power budget audit with Frank",
+    "body": "Let’s pair on power profiling.\n\nGraph-impact:\n- COLLABORATES_WITH(Bob↔Frank): context=\"power budget audit\", valid_from=2025-08-30\n\n— Bob",
+    "recipients": ["frank.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-30T14:30:00+03:00"
+  },
+  {
+    "id": "e-118",
+    "from": "erin.manager@example.com",
+    "subject": "Adjust Fastener Pack to 30",
+    "body": "Consumption update: lower P-5005 qty from 50 to 30.\n\nGraph-impact:\n- HAS_PART(Apollo→P-5005): close previous (valid_to=2025-08-31)\n- HAS_PART(Apollo→P-5005): qty=30, valid_from=2025-08-31\n\n— Erin",
+    "recipients": ["dave.engineer@example.com"],
+    "cc": ["carol.engineer@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-31T09:45:00+03:00"
+  },
+  {
+    "id": "e-119",
+    "from": "grace.qa@example.com",
+    "subject": "QA collaboration with Carol on sensors",
+    "body": "Spinning up a QA track for sensor validation.\n\nGraph-impact:\n- COLLABORATES_WITH(Grace↔Carol): context=\"sensor QA\", valid_from=2025-08-31\n\n— Grace",
+    "recipients": ["carol.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-08-31T16:20:00+03:00"
+  },
+  {
+    "id": "e-120",
+    "from": "alice.manager@example.com",
+    "subject": "Eve joins (Firmware) + review with Bob",
+    "body": "Please add Eve as Firmware Engineer from 2025-09-01 and pair her with Bob for a short review cycle.\n\nGraph-impact:\n- WORKS_ON(Eve→Apollo): role=Firmware Engineer, since=2025-09-01, valid_from=2025-09-01\n- COLLABORATES_WITH(Eve↔Bob): context=\"firmware review\", valid_from=2025-09-01\n\n— Alice",
+    "recipients": ["eve.engineer@example.com", "bob.engineer@example.com"],
+    "cc": ["erin.manager@example.com"],
+    "bcc": [],
+    "send_date": "2025-09-01T10:00:00+03:00"
+  }
+]
