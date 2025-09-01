@@ -1,7 +1,7 @@
 # retrieval_agent.py
 """
 Usage:
-  python retrieval_agent.py
+  python retrieval_agent.pys
 
 You will be prompted for a query that must start with either:
   - READ ...
